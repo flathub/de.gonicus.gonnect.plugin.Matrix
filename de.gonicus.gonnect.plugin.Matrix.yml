@@ -29,6 +29,9 @@ modules:
         CARGO_NET_OFFLINE: 'true'
 
     build-commands:
+      # gouda_proto build.rs expects protos/ at ../protos relative to its
+      # vendor directory. This symlink resolves that without a commit hash.
+      - ln -sf ../../flatpak-cargo/git/gouda-core-rs-f861afb/protos cargo/vendor/protos
       - cargo --offline fetch --manifest-path Cargo.toml --verbose
       - cargo build --offline --release --all-features
       - install -Dm0755 target/release/gouda_matrix ${FLATPAK_DEST}/bin/gouda_matrix
@@ -38,8 +41,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/gonicus/gouda-matrix.git
-        tag: v0.3
-        commit: 80b8b9c56ceee89b758ab3d8a8ebf0b813d7cb4f
+        tag: v0.4.0
+        commit: aeaf7969de3c891a21dc27560f25d02f06f5f22d
       - type: file
         path: de.gonicus.gonnect.plugin.Matrix.metainfo.xml
       - cargo-sources.yml

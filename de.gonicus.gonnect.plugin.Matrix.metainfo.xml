@@ -27,6 +27,7 @@
   <url type="bugtracker">https://github.com/gonicus/gonnect/issues</url>
   <url type="help">https://docs.gonicus.de/gonnect</url>
   <url type="contact">https://gonnect-project.org</url>
+  <url type="translate">https://hosted.weblate.org/engage/gonnect/</url>
   <url type="contribute">https://github.com/gonicus/gonnect#contributing-ov-file</url>
   <url type="vcs-browser">https://github.com/gonicus/gonnect</url>
 
@@ -36,19 +37,8 @@
 
   <content_rating type="oars-1.1" />
 
-  <description>
-    <p>
-      This is the Matrix chat plugin for GOnnect. It enables you to enter chat rooms
-      and having a conversation with your contacts in a secure way.
-    </p>
-    <p xml:lang="de">
-      Dies ist das Matrix-Chat-Plugin für GOnnect. Es ermöglicht das Betreten von
-      Chat-Räumen und die Konversation mit Deinen Kontakten in einer sicheren Art
-      und Weise.
-    </p>
-  </description>
-
   <releases>
+    <release version="0.5.0" date="2026-08-04"/>
     <release version="0.4.0" date="2026-07-20"/>
     <release version="0.3" date="2026-06-30"/>
     <release version="0.3" date="2026-06-30"/>

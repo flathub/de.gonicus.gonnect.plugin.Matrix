@@ -1,7 +1,7 @@
 - type: git
   url: https://github.com/gonicus/gouda-core-rs
-  commit: f861afb342f7501544354702b2dda84c8d1a38d2
-  dest: flatpak-cargo/git/gouda-core-rs-f861afb
+  commit: 90eff352c106894f4f83bd0e18524cced70c1eb5
+  dest: flatpak-cargo/git/gouda-core-rs-90eff35
 - type: archive
   archive-type: tar-gzip
   url: https://static.crates.io/crates/accessory/accessory-2.1.0.crate
@@ -1434,13 +1434,13 @@
   dest-filename: .cargo-checksum.json
 - type: shell
   commands:
-  - cp -r --reflink=auto "flatpak-cargo/git/gouda-core-rs-f861afb/gouda_core" "cargo/vendor/gouda_core"
+  - cp -r --reflink=auto "flatpak-cargo/git/gouda-core-rs-90eff35/gouda_core" "cargo/vendor/gouda_core"
 - type: inline
   contents: '[package]
 
     name = "gouda_core"
 
-    version = "0.1.0"
+    version = "0.4.0"
 
     edition = "2021"
 
@@ -1459,6 +1459,7 @@
 
     log = "0.4"
 
+
     [dependencies.gouda_proto]
 
     path = "gouda_proto"
@@ -1474,6 +1475,7 @@
     [dev-dependencies]
 
     env_logger = "0.11"
+
 
     [dev-dependencies.gouda_core]
 
@@ -1522,13 +1524,13 @@
   dest-filename: .cargo-checksum.json
 - type: shell
   commands:
-  - cp -r --reflink=auto "flatpak-cargo/git/gouda-core-rs-f861afb/gouda_proto" "cargo/vendor/gouda_proto"
+  - cp -r --reflink=auto "flatpak-cargo/git/gouda-core-rs-90eff35/gouda_proto" "cargo/vendor/gouda_proto"
 - type: inline
   contents: '[package]
 
     name = "gouda_proto"
 
-    version = "0.1.0"
+    version = "0.4.0"
 
     edition = "2021"
 
@@ -1544,7 +1546,12 @@
 
     prost = "0.14"
 
-    serde = "1.0"
+
+    [dependencies.serde]
+
+    version = "1.0"
+
+    features = ["derive"]
 
 
     [build-dependencies]
@@ -5026,7 +5033,7 @@
 
     replace-with = "vendored-sources"
 
-    tag = "v0.1.0"
+    tag = "v0.4.0"
 
     '
   dest: cargo

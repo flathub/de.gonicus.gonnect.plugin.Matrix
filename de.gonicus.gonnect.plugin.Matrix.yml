@@ -30,8 +30,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/gonicus/gouda-matrix.git
-        tag: v0.5.0
-        commit: 5bf4ea1f2cfd02cab2d5d24cf2f7df6cf733042c
+        tag: v0.6.0
+        commit: 423ffb05183b8e59456cfa8a58dbc11505aca5f1
       - type: file
         path: de.gonicus.gonnect.plugin.Matrix.metainfo.xml
       - cargo-sources.yml
